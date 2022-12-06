@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>[CODE ACADEMY: NIVEL 2] Etiquetas - Forms </title>
+    </head>
+
+    <body>
+         <h1>Tipos de input</h1>
+         
+         <br><br>
+
+         <form>
+            <!-- La apariencia de estos controles depende mucho del explorador en uso.
+                Si el explorador no soporta el tipo de input, se verá como un input del tipo text -->
+            
+            Text: <input type="text" name="f_text"><br><br>
+            <!-- Si uso label relacionado al ID de un input, al hacer click sobre ella se pasa el foco al control -->
+             <label for="f_password" >Password: </label> <input type="password" id="f_password"> <br><br>
+             <input type="button" value="button" onclick="alert('Hiciste click!')"><br><br>
+             <input type="checkbox" id="f_checkbox" value="checkbox"> Checkbox <br><br>
+            <input type="radio" name="f_radio1" value="radio1" checked> Opcion 1 sin el mismo nombre<br>
+            <input type="radio" name="f_radio2" value="radio2"> Opcion 2 sin el mismo nombre<br><br>
+            <input type="radio" name="f_radio3" value="radio3" checked> Opcion 3 con el mismo nombre<br>
+            <input type="radio" name="f_radio3" value="radio4"> Opcion 4 con el mismo nombre<br><br>
+
+            <!-- color no funciona en Internet Explorer 11 (y anteriores) y Safari 9.1 (y anteriores)-->
+            Color picker: <input type="color" name="f_color"><br><br>
+
+            <!-- date no funciona en Internet Explorer 11 (y anteriores)-->
+            Date: <input type="date" name="f_date">  <br><br>
+
+            <!-- datetime-local no funciona en Firefox, Internet Explorer 12 (y anteriores)-->
+            Date and time: <input type="datetime-local" name="f_datetimelocal">
+
+            <!-- time no funciona en Internet Explorer 12 (y anteriores)-->
+            Time: <input type="time" name="f_time"> <br><br> 
+
+            <!-- month no funciona en Firefox, Internet Explorer 11 (y anteriores)-->
+             Month: <input type="week" name="f_week"> <br><br>
+
+            <!-- week no funciona en Firefox, Internet Explorer 11 (y anteriores)-->
+             Week: <input type="month" name="f_month"> <br><br>
+
+             <!-- email no funciona en Internet Explorer 9 (y anteriores) y Safari-->
+             E-mail:<input type="email" name="f_email"><br><br>
+
+             <!-- number y range no funcionan en Internet Explorer 9 (y anteriores)-->
+             Number: <input type="number" name="f_number" min="1" max="100"> <br><br>
+             Range: <input type="range" name="f_range" min="1" max="100"> <br><br>
+
+             Search: <input type="search" name="f_search"> <br><br>
+
+             <!-- Tel solo funciona en Safari 8 y posteriores-->
+             Tel: <input type="tel" name="f_tel"> <br><br>
+             File: <input type="file" name="f_file"><br><br>
+
+             <!-- URL no funciona en Internet Explorer 9 (y anteriores) y Safari-->
+             URL: <input type="url" name="f_url"><br><br>
+             
+             Hidden: <input type="hidden" name="f_hidden" value="Esto no se ve"><br><br>
+             Image: <input type="image" name="f_image" src="https://cdn3.iconfinder.com/data/icons/back-to-the-future/512/marty-mcfly-128.png"><br><br>
+             <input type="submit" value="Submit"> &nbsp; <input type="reset" value="Reset"><br><br>
+             
+             <h1> Otros elementos de un form:</h1>
+             <fieldset>
+                 <legend>Fieldset: </legend>
+                 Select: <select>
+                     <option value="i1">Item 1</option>
+                     <option value="i2">Item 2</option>
+                     <option value="i3">Item 3</option>
+                     <optgroup label="optgroup">
+                            <option value="i4">Item 4</option>
+                            <option value="i5">Item 5</option>
+                            <option value="i6">Item 6</option>
+                     </optgroup>
+                 </select><br><br>
+                 Textarea: <textarea rows=5 cols="30">Textarea sirve para textos multil&iacute;nea</textarea><br><br>
+                <!--IE9 y Safari no soportan el tag datalist-->
+                Datalist: <input list="datalist1" name="f_idatalist">
+                    <datalist id="datalist1">
+                    <option value="opcion1">
+                    <option value="opcion2">
+                    <option value="opcion3">
+                    <option value="opcion4">
+                    <option value="opcion5">
+                    </datalist> <br><br>
+                <button name="f_button2" onclick="alert('El button acepta imagenes. El input solo texto')">Otro bot&oacute;n <img src="https://cdn3.iconfinder.com/data/icons/back-to-the-future/512/delorean-02-128.png" height="32" width="32"></button>
+             </fieldset>
+
+         </form>    
+
+         <form oninput="f_output.value=parseInt(f_range_output.value)"> 
+             <!--Value es un string, hay que convertirlo a int para el output-->
+                
+                0
+                <input type="range" id="f_range_output" value="50" min="1" max="100">
+                100
+                = <output name="f_output" for="f_range_output"></output> &lt;-- Mover el rango para ver el Output
+                </form>
+        </body>
+</html>
+    
